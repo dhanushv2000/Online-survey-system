@@ -1,0 +1,68 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Results</title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <style media="screen">
+      a:link {
+        text-decoration: none;
+      }
+
+      h6 {
+        text-align: center;
+      }
+
+      .row {
+        margin: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <br><br>
+    <div class="container">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h1 class="panel-title">Question Results From " {{courses}} " Survey</h1>
+          <br><br>
+        </div>
+        <table id="dev-table" border="1" align = center>
+          <thead>
+            <tr>
+
+              <th><br>Question</th>
+              <th><br>Total Answers</th>
+              <th><br>Option 1 <br>Count</th>
+              <th><br>Option 2 <br>Count</th>
+              <th><br>Option 3 <br>Count</th>
+              <th><br>Option 4 <br>Count</th>
+
+            </tr>
+          </thead>
+          {% for t in result %}
+          <tr>
+
+            <td align = center> <br>{{t.question}}<br> </td>
+            <td align = center> {{t.total}}</td>
+            <td align = center> {{t.option1}} <br> {{t.option1_count}}</td>
+            <td align = center> {{t.option2}} <br> {{t.option2_count}}</td>
+            <td align = center> {{t.option3}} <br> {{t.option3_count}}</td>
+            <td align = center> {{t.option4}} <br> {{t.option4_count}}</td>
+
+
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+    </div>
+
+    <br><br><br><br><br><br>
+
+
+  </body>
+</html>

@@ -1,0 +1,29 @@
+	
+Install Python(3.7.6) (Dont Forget to Tick Add to Path while installing Python)
+
+Download Anaconda :
+Create environment using :
+	conda create --name envname (environment)
+	activate envname
+	
+Install python :
+	conda install -c anaconda python
+	
+
+Open Terminal and Execute Following Commands :
+	python -m pip install -r requirements. txt
+	pip install xhtml2pdf
+	
+After This Project Un-Zip Folder and Extract it:
+
+Move to project folder in Terminal. Then run following Commands :
+	python manage.py makemigrations
+	python manage.py migrate
+
+create Login for HR:
+	python manage.py createsuperuser
+
+To run the system :
+	python manage.py runserver
+
+Copy the http address into the browser.

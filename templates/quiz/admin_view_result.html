@@ -1,0 +1,61 @@
+{% extends 'quiz/adminbase.html' %}
+{% block content %}
+{%load static%}
+
+<head>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  <style media="screen">
+    a:link {
+      text-decoration: none;
+    }
+
+    h6 {
+      text-align: center;
+    }
+
+    .row {
+      margin: 100px;
+    }
+  </style>
+</head>
+<br><br>
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h6 class="panel-title">Questions From {{courses}} Survey</h6>
+    </div>
+    <table class="table table-hover" id="dev-table">
+      <thead>
+        <tr>
+
+          <th>Question</th>
+          <th>Total Answers</th>
+          <th>Option 1 Count</th>
+          <th>Option 2 Count</th>
+          <th>Option 3 Count</th>
+          <th>Option 4 Count</th>
+
+        </tr>
+      </thead>
+      {% for t in result %}
+      <tr>
+
+        <td> {{t.question}}</td>
+        <td> {{t.total}}</td>
+        <td> {{t.option1_count}} - {{t.option1}}</td>
+        <td> {{t.option2_count}} - {{t.option2}}</td>
+        <td> {{t.option3_count}} - {{t.option3}}</td>
+        <td> {{t.option4_count}} - {{t.option4}}</td>
+
+
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>
+
+<br><br><br><br><br><br>
+{% endblock content %}
