@@ -10,5 +10,5 @@
 
 **Instructor**
 ```
-Dr. Shiva Ram Dubey
+Dr. O.P.Vyas
 ```
